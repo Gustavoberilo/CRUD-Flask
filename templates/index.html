@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lista de Jogadores</title>
+</head>
+<body>
+    <h1>Jogadores</h1>
+    <a href="/cadastrar">Cadastrar novo jogador</a>
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.nome }}</strong> <br> {{ item.idade }} anos <br> posição: {{ item.posicao }}<br>
+                <a href="/editar/{{ item.id }}">Editar</a>
+                <a href="/deletar/{{ item.id }}" onclick="return confirm('Tem certeza que deseja deletar?')">Deletar</a>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Editar Jogador</title>
+</head>
+<body>
+    <h1>Editar Jogador</h1>
+    <form method="post">
+        Nome: <input type="text" name="nome" value="{{ item.nome }}" required><br>
+        Idade: <input type="number" name="idade" value="{{ item.idade }}" required><br>
+        Posição: <input type="text" name="posicao" value="{{ item.posicao }}" required><br>
+        <button type="submit">Atualizar</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>
