@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Jogadores</title>
+</head>
+<body>
+    <h1>Jogadores</h1>
+    <a href="/cadastrar">Cadastrar novo jogador</a>
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.nome }}</strong> <br>
+                {{ item.idade }} anos <br>
+                Posição: {{ item.posicao }} <br>
+                <a href="/editar/{{ item.id }}">Editar</a>
+                <a href="/deletar/{{ item.id }}" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
